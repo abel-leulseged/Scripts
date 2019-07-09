@@ -2,12 +2,12 @@
 sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 bash Anaconda3-2019.03-Linux-x86_64.sh
-echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.zshrc
+echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.bashrc
 rm Anaconda3-2019.03-Linux-x86_64.sh
 
 # Setup default conda virtual environment for projects
 conda create -n projects python=3.6
-echo 'source activate projects' >> ~/.zshrc
+echo 'source activate projects' >> ~/.bashrc
 conda install -c conda-forge ipywidgets -y
 pip install kaggle
 
