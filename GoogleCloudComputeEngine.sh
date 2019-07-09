@@ -11,6 +11,17 @@ echo 'source activate projects' >> ~/.zshrc
 conda install -c conda-forge ipywidgets -y
 pip install kaggle
 
+conda install -c conda-forge jupyterlab -y
+
+# Setup Jupyter config so that it is listening not just on local network
+# but also on external network.  Otherwise, we can't reach it via its IP address.
+mkdir -p ~/.jupyter
+cat >  ~/.jupyter/jupyter_notebook_config.py << HERE_DOC
+c = get_config()
+c.NotebookApp.ip = '*'
+c.NotebookApp.open_browser = False
+c.NotebookApp.allow_remote_access = True
+HERE_DOC
 
 # cuda
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1604_10.1.168-1_amd64.deb
