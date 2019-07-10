@@ -8,3 +8,11 @@ source ~/.bashrc
 
 # Setup default conda virtual environment for tf projects
 conda create --name tf_gpu --file requirements.txt
+
+# To test GPU acceleration, run the code below in python
+########################################
+# import tensorflow as tf
+# assert tf.test.is_gpu_available()
+# assert tf.test.is_built_with_cuda()
+# tf.test.gpu_device_name()
+##########################################
