@@ -7,7 +7,9 @@ rm Anaconda3-2019.03-Linux-x86_64.sh
 source ~/.bashrc
 
 # Setup default conda virtual environment for tf projects
-conda create --name tf_gpu --file requirements.txt
+#conda create --name tf_gpu --file requirements.txt
+
+conda env create -f environment.yml
 
 # To test GPU acceleration, run the code below in python
 ########################################
