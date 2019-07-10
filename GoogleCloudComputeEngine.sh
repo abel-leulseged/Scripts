@@ -7,22 +7,4 @@ rm Anaconda3-2019.03-Linux-x86_64.sh
 source ~/.bashrc
 
 # Setup default conda virtual environment for tf projects
-conda create --name tf_gpu tensorflow-gpu 
-echo 'source activate tf_gpu' >> ~/.bashrc
-conda install -c conda-forge ipywidgets -y
-
-pip install kaggle
-pip install jupyter
-conda install -c conda-forge jupyterlab -y
-
-# Setup Jupyter config so that it is listening not just on local network
-# but also on external network.  Otherwise, we can't reach it via its IP address.
-mkdir -p ~/.jupyter
-cat >  ~/.jupyter/jupyter_notebook_config.py << HERE_DOC
-c = get_config()
-c.NotebookApp.ip = '*'
-c.NotebookApp.open_browser = False
-c.NotebookApp.allow_remote_access = True
-HERE_DOC
-
-pip install keras
+conda create --name tf_gpu --file requirements.txt
