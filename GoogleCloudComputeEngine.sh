@@ -11,6 +11,7 @@ echo 'source activate tf_gpu' >> ~/.bashrc
 conda install -c conda-forge ipywidgets -y
 
 pip install kaggle
+pip install jupyter
 conda install -c conda-forge jupyterlab -y
 
 # Setup Jupyter config so that it is listening not just on local network
