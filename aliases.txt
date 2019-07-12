@@ -1,0 +1,24 @@
+
+### GOOGLE CLOUD SDK ALIASES ####
+
+export ZONE="us-west1-b"
+
+# Tensorflow GCP Instance
+tf_init(){
+	gcloud compute instances start abel-tf --zone=$ZONE
+	echo 'Click here to open Jupyter Lab: http://localhost:8080/lab'
+	gcloud compute ssh -q --zone=$ZONE jupyter@$abel-tf -- -L 8080:localhost:8080 
+}
+tf_exit(){
+	gcloud compute instances stop abel-tf
+}
+
+# Pytorch GCP Instance
+pyt_init(){
+	gcloud compute instances start abel-pyt --zone=$ZONE
+	echo 'Click here to open Jupyter Lab: http://localhost:8080/lab'
+	gcloud compute ssh -q --zone=$ZONE jupyter@$abel-pyt -- -L 8080:localhost:8080 
+}
+pyt_exit(){
+	gcloud compute instances stop abel-pyt
+}

@@ -117,6 +117,7 @@ sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 sudo apt update
 sudo apt upgrade
 
+cat aliases.txt >> ~/.zshrc
 # ALIASES AND FUNCTIONS
 # alias mount_wilkes='sshfs atadesse@wilkes.cs.hmc.edu:/home/atadesse/ ~/Wilkes/'
 # alias unmount_wilkes='fusermount -u ~/Wilkes/'
