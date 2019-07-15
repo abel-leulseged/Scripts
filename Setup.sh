@@ -121,11 +121,3 @@ cat aliases.txt >> ~/.zshrc
 # ALIASES AND FUNCTIONS
 # alias mount_wilkes='sshfs atadesse@wilkes.cs.hmc.edu:/home/atadesse/ ~/Wilkes/'
 # alias unmount_wilkes='fusermount -u ~/Wilkes/'
-# mount_cs152(){
-# 	gcloud compute instances start cs152
-# 	gcloud compute config-ssh
-# 	sshfs abelleulseged@cs152.us-west1-b.theta-style-216718:/home/abelleulseged ~/cs152/
-# }
-# unmount_cs152(){
-# 	fusermount -u ~/cs152/ && gcloud compute instances stop cs152
-# }
