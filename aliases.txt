@@ -22,3 +22,8 @@ pyt_init(){
 pyt_exit(){
 	gcloud compute instances stop abel-pyt
 }
+
+# Backup
+back_imp(){
+	cp -rn /media/abel/Abel\'s\ Drive/Imp /media/abel/Transcend/
+}
