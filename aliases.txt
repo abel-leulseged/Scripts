@@ -2,28 +2,25 @@
 ### GOOGLE CLOUD SDK ALIASES ####
 
 export ZONE="us-west1-b"
+export TF-INSTANCE-NAME = ''
+Texport PYT-INSTANCE-NAME = ''
 
 # Tensorflow GCP Instance
 tf_init(){
-	gcloud compute instances start abel-tf --zone=$ZONE
+	gcloud compute instances start $TF-INSTANCE-NAME --zone=$ZONE
 	echo 'Click here to open Jupyter Lab: http://localhost:8080/lab'
-	gcloud compute ssh -q --zone=$ZONE jupyter@$abel-tf -- -L 8080:localhost:8080 
+	gcloud compute ssh -q --zone=$ZONE jupyter@$TF-INSTANCE-NAME -- -L 8080:localhost:8080 
 }
 tf_exit(){
-	gcloud compute instances stop abel-tf
+	gcloud compute instances stop $TF-INSTANCE-NAME
 }
 
 # Pytorch GCP Instance
 pyt_init(){
-	gcloud compute instances start abel-pyt --zone=$ZONE
+	gcloud compute instances start $PYT-INSTANCE-NAME --zone=$ZONE
 	echo 'Click here to open Jupyter Lab: http://localhost:8080/lab'
-	gcloud compute ssh -q --zone=$ZONE jupyter@$abel-pyt -- -L 8080:localhost:8080 
+	gcloud compute ssh -q --zone=$ZONE jupyter@$PYT-INSTANCE-NAME -- -L 8080:localhost:8080 
 }
 pyt_exit(){
-	gcloud compute instances stop abel-pyt
-}
-
-# Backup
-back_imp(){
-	cp -rn /media/abel/Abel\'s\ Drive/Imp /media/abel/Transcend/
+	gcloud compute instances stop $PYT-INSTANCE-NAME
 }
