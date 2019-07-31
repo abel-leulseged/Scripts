@@ -10,6 +10,10 @@ sudo apt-get install -y zsh
 sudo apt-get install -y hexchat
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Latex
+sudo apt-get install -y texlive-full
+sudo apt-get install -y texmaker
+
 # Install VSCODE
 sudo apt update
 sudo apt install software-properties-common apt-transport-https wget
