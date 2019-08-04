@@ -24,3 +24,6 @@ Usage:  `sh pytorch-GCP.sh <INSTANCE_NAME>`
 The second file i.e. **pyt-ssh.sh** can be used to start the Pytorch instance and ssh into it from the terminal without going to the Google Cloud webpage.
 
 Usage: `sh tf-ssh.sh `
+
+## Fastai local setup Scripts
+Int the "fastai-local" folder, there is a .sh file that creates and activates a conda fastai environment using the fastai course v3 yml file.
