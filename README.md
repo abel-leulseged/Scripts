@@ -27,3 +27,5 @@ Usage: `sh tf-ssh.sh `
 
 ## Fastai local setup Scripts
 Int the "fastai-local" folder, there is a .sh file that creates and activates a conda fastai environment using the fastai course v3 yml file.
+
+Usage: `sh fastai-local.sh`
