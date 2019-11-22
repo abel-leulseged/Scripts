@@ -48,6 +48,10 @@ bash Anaconda3-2019.03-Linux-x86_64.sh
 echo 'export PATH=~/anaconda3/bin:$PATH' >> ~/.zshrc
 rm Anaconda3-2019.03-Linux-x86_64.sh
 
+#Jupyter
+conda install -c conda-forge jupyterlab
+
+
 # XDMAN
 wget https://sourceforge.net/projects/xdman/files/xdm-2018-x64.tar.xz
 tar -xvf xdm-2018-x64.tar.xz
