@@ -120,6 +120,9 @@ sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 # Battery Life Issues
 # https://medium.com/@tomwwright/better-battery-life-on-ubuntu-17-10-4588b7f72def
 
+# Disable GPU bbswitch
+# https://medium.com/@agathver/nvidia-gpu-optimus-prime-and-ubuntu-18-04-woes-f52e7f850f3d
+
 # Finish Up
 sudo apt update
 sudo apt upgrade
